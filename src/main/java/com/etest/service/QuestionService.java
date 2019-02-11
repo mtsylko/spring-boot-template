@@ -1,7 +1,7 @@
 package com.etest.service;
 
 import com.etest.dao.QuestionDao;
-import com.etest.entity.Question;
+import com.etest.entity.test.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
 package com.etest.dao;
 
-import com.etest.entity.test.Test;
+import com.etest.entity.vocabulary.Dictionary;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface TestDao extends CrudRepository<Test, Long> {}
+public interface DictionaryDao extends CrudRepository<Dictionary, Long> {}

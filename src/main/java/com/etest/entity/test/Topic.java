@@ -1,4 +1,6 @@
-package com.etest.entity;
+package com.etest.entity.test;
+
+import com.etest.entity.BasicEntity;
 
 import javax.persistence.*;
 

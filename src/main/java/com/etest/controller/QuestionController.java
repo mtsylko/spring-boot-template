@@ -1,6 +1,6 @@
 package com.etest.controller;
 
-import com.etest.entity.Question;
+import com.etest.entity.test.Question;
 import com.etest.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

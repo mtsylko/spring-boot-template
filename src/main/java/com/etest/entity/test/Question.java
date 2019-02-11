@@ -1,7 +1,8 @@
-package com.etest.entity;
+package com.etest.entity.test;
+
+import com.etest.entity.BasicEntity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -16,7 +17,6 @@ public class Question extends BasicEntity {
 
     @OneToMany(mappedBy = "question")
     private List<Answer> answerList;
-
 
     public String getQuestionText() {
         return questionText;

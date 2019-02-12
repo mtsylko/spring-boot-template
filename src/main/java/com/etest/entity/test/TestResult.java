@@ -2,7 +2,6 @@ package com.etest.entity.test;
 
 import com.etest.entity.BasicEntity;
 import org.springframework.data.mongodb.core.mapping.Document;
-import javax.persistence.*;
 import java.sql.Time;
 
 
@@ -11,11 +10,8 @@ public class TestResult extends BasicEntity {
 
     private Integer answeredCorrectly;
 
-    @Column(name = "time_spent")
     private Time timeSpent;
 
-    @ManyToOne
-    @JoinColumn(name = "test_id", foreignKey = @ForeignKey(name = "fk_test_test_result"))
     private Test test;
 
     private Boolean passed;

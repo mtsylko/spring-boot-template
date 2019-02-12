@@ -1,13 +1,10 @@
 package com.etest.entity.user;
 
 import com.etest.entity.BasicEntity;
-
+import org.springframework.data.mongodb.core.mapping.Document;
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "role")
+@Document
 public class Role extends BasicEntity {
 
     @Column(name = "name", nullable = false)

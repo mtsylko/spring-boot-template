@@ -1,15 +1,11 @@
 package com.etest.entity.test;
 
 import com.etest.entity.BasicEntity;
-
+import org.springframework.data.mongodb.core.mapping.Document;
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
-/**
- * Created by Max on 30.04.18.
- */
-@Entity
-@Table(name = "test")
+
+@Document
 public class Test extends BasicEntity {
 
     @Column(name = "name", nullable = false)

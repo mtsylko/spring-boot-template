@@ -1,14 +1,9 @@
 package com.etest.entity.vocabulary;
 
 import com.etest.entity.BasicEntity;
-import com.etest.entity.vocabulary.Language;
-import com.etest.entity.vocabulary.PartOfSpeech;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "word")
+@Document
 public class Word extends BasicEntity {
 
     private String word;

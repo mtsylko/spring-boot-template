@@ -1,15 +1,12 @@
 package com.etest.entity.test;
 
 import com.etest.entity.BasicEntity;
-
+import org.springframework.data.mongodb.core.mapping.Document;
 import javax.persistence.*;
 import java.sql.Time;
 
-/**
- * Created by Max on 30.04.18.
- */
-@Entity
-@Table(name = "test_result")
+
+@Document
 public class TestResult extends BasicEntity {
 
     private Integer answeredCorrectly;

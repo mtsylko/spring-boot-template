@@ -1,13 +1,10 @@
 package com.etest.entity.user;
 
 import com.etest.entity.BasicEntity;
-
+import org.springframework.data.mongodb.core.mapping.Document;
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "privilege")
+@Document
 public class Privilege extends BasicEntity {
 
     @Column(name = "name", nullable = false)

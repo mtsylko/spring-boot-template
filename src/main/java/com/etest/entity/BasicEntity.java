@@ -1,17 +1,13 @@
 package com.etest.entity;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+
 import java.io.Serializable;
 
-/**
- * Created by Max on 30.04.18.
- */
-@MappedSuperclass
+
 public class BasicEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     public Long getId() {

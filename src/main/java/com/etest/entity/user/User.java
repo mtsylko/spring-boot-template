@@ -1,17 +1,10 @@
 package com.etest.entity.user;
 
 import com.etest.entity.BasicEntity;
-
+import org.springframework.data.mongodb.core.mapping.Document;
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-/**
- * Created by Max on 30.04.18.
- */
-@Entity
-@Table(name = "user")
+@Document
 public class User extends BasicEntity {
 
     @Column(name = "username", nullable = false, unique = true)

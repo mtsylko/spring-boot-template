@@ -1,12 +1,10 @@
 package com.etest.entity.vocabulary;
 
 import com.etest.entity.BasicEntity;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "word_pair")
+@Document
 public class WordPair extends BasicEntity {
 
     private Word original;

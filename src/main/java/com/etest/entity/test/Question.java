@@ -1,15 +1,12 @@
 package com.etest.entity.test;
 
 import com.etest.entity.BasicEntity;
-
+import org.springframework.data.mongodb.core.mapping.Document;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by Max on 30.04.18.
- */
-@Entity
-@Table(name = "question")
+
+@Document
 public class Question extends BasicEntity {
 
     @Column(name = "question_text")

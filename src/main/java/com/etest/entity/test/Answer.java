@@ -1,21 +1,17 @@
 package com.etest.entity.test;
 
-import com.etest.entity.BasicEntity;
-import org.springframework.data.mongodb.core.mapping.Document;
+public class Answer {
 
-@Document
-public class Answer extends BasicEntity {
-
-    private Question question;
+    private String answerText;
 
     private Boolean isCorrect;
 
-    public Question getQuestion() {
-        return question;
+    public String getAnswerText() {
+        return answerText;
     }
 
-    public void setQuestion(Question question) {
-        this.question = question;
+    public void setAnswerText(String answerText) {
+        this.answerText = answerText;
     }
 
     public Boolean getCorrect() {

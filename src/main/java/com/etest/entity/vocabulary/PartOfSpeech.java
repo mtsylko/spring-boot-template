@@ -1,6 +1,6 @@
 package com.etest.entity.vocabulary;
 
-public enum  PartOfSpeech {
+public enum PartOfSpeech {
 
     NOUN("N"),
     PRONOUN("PR"),

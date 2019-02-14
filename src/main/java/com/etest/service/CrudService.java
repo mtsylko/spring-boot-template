@@ -1,16 +1,17 @@
 package com.etest.service;
 
 import java.util.List;
+import java.util.Optional;
 
-public interface CrudService <E, D> {
+public interface CrudService <ID, T> {
 
-    void save(D entity);
+    T save(T entity);
 
-    D get(Long id);
+    Optional<T> get(ID id);
 
-    List<D> getList();
+    List<T> getList();
 
-    void remove(Long id);
+    void remove(ID id);
 
 
 }

@@ -1,19 +1,27 @@
 package com.etest.service;
 
-import com.etest.dao.TestDao;
+import com.etest.entity.test.Test;
+import com.etest.repository.TestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Service;
 
 /**
  * Created by Max on 16.06.18.
  */
 @Service
-public class TestService {
+public class TestService extends BasicService<String, Test> {
 
-    private TestDao testDao;
+    private TestRepository testRepository;
 
     @Autowired
-    public void setTestDao(TestDao testDao) {
-        this.testDao = testDao;
+    public void setTestRepository(TestRepository testRepository) {
+        this.testRepository = testRepository;
+    }
+
+
+    @Override
+    protected MongoRepository<Test, String> getRepository() {
+        return testRepository;
     }
 }

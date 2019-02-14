@@ -11,7 +11,6 @@ public class WordPair extends BasicEntity {
 
     private Word translation;
 
-
     public Word getOriginal() {
         return original;
     }

@@ -27,4 +27,5 @@ public class Question extends BasicEntity {
     public void setAnswerList(List<Answer> answerList) {
         this.answerList = answerList;
     }
+
 }

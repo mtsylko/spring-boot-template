@@ -7,12 +7,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Created by Max on 30.04.18.
- */
+
 @RestController
 @RequestMapping("/test")
-public class TestController extends BasicController {
+public class TestController  {
 
     private TestService testService;
 

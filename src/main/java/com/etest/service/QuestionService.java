@@ -1,47 +1,25 @@
 package com.etest.service;
 
-import com.etest.dao.QuestionDao;
+import com.etest.repository.QuestionRepository;
 import com.etest.entity.test.Question;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
 
-/**
- * Created by Max on 30.04.18.
- */
 @Service
-public class QuestionService {
+public class QuestionService extends BasicService <String, Question> {
 
-    private QuestionDao questionDao;
+    private QuestionRepository questionRepository;
 
     @Autowired
-    public void setQuestionDao(QuestionDao questionDao) {
-        this.questionDao = questionDao;
-    }
-
-    public Question getQuestion(Long id) {
-        Optional<Question> questionOptional = questionDao.findById(id);
-        if(questionOptional.isPresent()) {
-            Question question = questionOptional.get();
-            return question;
-        }
-        return null;
-    }
-
-    public void addQuestion(Question question) {
-       questionDao.save(question);
+    public void setQuestionRepository(QuestionRepository questionRepository) {
+        this.questionRepository = questionRepository;
     }
 
 
-    public void removeQuestion(Long id) {
-        questionDao.deleteById(id);
+    @Override
+    protected MongoRepository<Question, String> getRepository() {
+        return questionRepository;
     }
-
-
-    public void editQuestion() {
-
-    }
-
-
 }

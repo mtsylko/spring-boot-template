@@ -24,12 +24,12 @@ public class RegisterUnitTest {
     @Test
     public void register(){
         User user = new User();
-        user.setId(1l);
+        user.setId("1");
         user.setFirstname("Maxim");
         user.setSurname("Tsylko");
         user.setEmail("mtsylko@gmail.com");
         user.setPassword("test");
-        userService.createUser(user);
+        userService.save(user);
     }
 
 }

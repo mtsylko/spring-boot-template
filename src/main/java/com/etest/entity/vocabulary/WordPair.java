@@ -3,6 +3,8 @@ package com.etest.entity.vocabulary;
 import com.etest.entity.BasicEntity;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 
 @Document
 public class WordPair extends BasicEntity {
@@ -10,6 +12,8 @@ public class WordPair extends BasicEntity {
     private Word original;
 
     private Word translation;
+
+    private List<Word> allTranslations;
 
     public Word getOriginal() {
         return original;
@@ -27,5 +31,11 @@ public class WordPair extends BasicEntity {
         this.translation = translation;
     }
 
+    public List<Word> getAllTranslations() {
+        return allTranslations;
+    }
 
+    public void setAllTranslations(List<Word> allTranslations) {
+        this.allTranslations = allTranslations;
+    }
 }

@@ -6,7 +6,9 @@ public enum PartOfSpeech {
     PRONOUN("PR"),
     ADJECTIVE("ADJ"),
     VERB("VERB"),
-    ADVERB("V");
+    ADVERB("V"),
+    GERUND("GER"),
+    PARTICIPLE("PRT");
 
     private String partOfSpeech;
 

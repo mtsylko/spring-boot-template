@@ -1,6 +1,7 @@
 package com.etest.entity.user;
 
 import com.etest.entity.BasicEntity;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -15,6 +16,9 @@ public class User extends BasicEntity {
     private String surname;
 
     private String email;
+
+    @DBRef
+    private Role role;
 
     public String getUsername() {
         return username;
@@ -54,5 +58,13 @@ public class User extends BasicEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

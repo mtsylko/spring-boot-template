@@ -3,9 +3,14 @@ package com.etest.entity.user;
 import com.etest.entity.BasicEntity;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.Collections;
 
 @Document
-public class User extends BasicEntity {
+public class User extends BasicEntity implements UserDetails {
 
     private String username;
 
@@ -19,6 +24,8 @@ public class User extends BasicEntity {
 
     @DBRef
     private Role role;
+
+    private String token;
 
     public String getUsername() {
         return username;
@@ -67,4 +74,38 @@ public class User extends BasicEntity {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.emptyList();
+    }
+
 }
